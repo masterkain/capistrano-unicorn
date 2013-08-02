@@ -120,7 +120,7 @@ module CapistranoUnicorn
             fi;
 
             echo "Starting Unicorn...";
-            cd #{current_path} && #{try_unicorn_user} BUNDLE_GEMFILE=#{current_path}/Gemfile #{unicorn_bundle} exec #{unicorn_bin} -c $UNICORN_CONFIG_PATH -E #{app_env} -D;
+            cd #{current_path} && #{try_unicorn_user} BUNDLE_GEMFILE=#{current_path}/Gemfile #{unicorn_bundle} exec #{unicorn_bin} -c $UNICORN_CONFIG_PATH -E #{app_env} -D -N;
           END
 
           script
